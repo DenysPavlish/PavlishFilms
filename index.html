@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PavlishFilms — Головна</title>
+  <link rel="shortcut icon" href="./logo.png" type="image/x-icon">
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+
+<!-- TOP NAVIGATION -->
+<nav class="top-nav">
+  <a href="index.html" class="nav-logo">
+    PAVLISH<span>FILMS</span>
+  </a>
+  <div class="nav-links">
+    <a href="index.html" class="active">Головна</a>
+    <a href="pages/movies.html">Афіша</a>
+    <a href="pages/schedule.html">Розклад</a>
+    <a href="pages/promotions.html">Акції</a>
+    <a href="pages/halls.html">Зали</a>
+    <a href="pages/gallery.html">Галерея</a>
+    <a href="pages/about.html">Про нас</a>
+    <a href="pages/contacts.html">Контакти</a>
+  </div>
+  <div class="nav-actions">
+    <div class="nav-search">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+      <input type="text" placeholder="Знайти фільм...">
+    </div>
+<button class="btn-login" id="loginBtn" onclick="openModal('loginModal')">
+  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+  <span>Увійти</span>
+</button>
+    <div class="hamburger" id="hamburger">
+      <span></span><span></span><span></span>
+    </div>
+  </div>
+</nav>
+
+<!-- MOBILE NAV -->
+<div class="mobile-nav" id="mobileNav">
+  <a href="../index.html">Головна</a><a href="./pages/movies.html">Афіша</a><a href="./pages/schedule.html"> Розклад</a>
+  <a href="./pages/promotions.html"> Акції</a><a href="./pages/halls.html"> Зали</a><a href="./pages/gallery.html"> Галерея</a>
+  <a href="./pages/about.html"> Про нас</a><a href="./pages/contacts.html"> Контакти</a>
+</div>
+
+<!-- LAYOUT -->
+<div class="layout">
+  <!-- SIDEBAR -->
+  <aside class="sidebar">
+    <div class="sidebar-section">
+      <div class="sidebar-title">Навігація</div>
+      <div class="sidebar-links">
+        <a href="index.html" class="active">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg>
+          Головна
+        </a>
+        <a href="pages/movies.html">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="2"/><line x1="7" y1="2" x2="7" y2="22"/><line x1="17" y1="2" x2="17" y2="22"/><line x1="2" y1="12" x2="22" y2="12"/></svg>
+          Афіша
+        </a>
+        <a href="pages/schedule.html">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+          Розклад
+        </a>
+        <a href="pages/promotions.html">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"/><line x1="7" y1="7" x2="7.01" y2="7"/></svg>
+          Акції
+        </a>
+        <a href="pages/halls.html">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+          Зали
+        </a>
+        <a href="pages/gallery.html">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
+          Галерея
+        </a>
+        <a href="pages/about.html">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+          Про нас
+        </a>
+        <a href="pages/contacts.html">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.77 1h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 8.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          Контакти
+        </a>
+      </div>
+    </div>
+
+    <div class="sidebar-divider"></div>
+
+    <div class="sidebar-section">
+      <div class="sidebar-title">Жанри</div>
+      <div class="sidebar-genres">
+        <a href="pages/movies.html">Бойовик</a>
+        <a href="pages/movies.html">Комедія</a>
+        <a href="pages/movies.html">Жахи</a>
+        <a href="pages/movies.html">Фантастика</a>
+        <a href="pages/movies.html">Драма</a>
+        <a href="pages/movies.html">Анімація</a>
+        <a href="pages/movies.html">Мелодрама</a>
+        <a href="pages/movies.html">Трилер</a>
+      </div>
+    </div>
+
+    <div class="sidebar-divider"></div>
+
+    <div class="sidebar-section">
+      <div class="sidebar-title">Ми в соцмережах</div>
+      <div class="sidebar-socials">
+        <a href="https://facebook.com" target="_blank" title="Facebook"><img src="./facebook.png" alt=""></a>
+        <a href="https://instagram.com" target="_blank" title="Instagram"><img src="./insta.png" alt=""></a>
+        <a href="https://t.me" target="_blank" title="Telegram"><img src="./telegram.png" alt=""></a>
+        <a href="https://youtube.com" target="_blank" title="YouTube"><img src="./youtube.png" alt=""></a>
+      </div>
+    </div>
+  </aside>
+
+  <!-- MAIN -->
+  <main class="main-content">
+
+    <!-- HERO -->
+<section class="hero">
+  <video class="hero-video" autoplay muted loop playsinline preload="auto">
+    <source src="./diiavol-nosit-prada-2-oficiinii-ukrayinski_OiMnDcTt.mp4" type="video/mp4">
+    Ваш браузер не підтримує відео.
+  </video>
+
+  <div class="hero-overlay"></div>
+
+  <div class="hero-content">
+    <div class="hero-badge">🔥 Прем'єра тижня</div>
+    <h1 class="hero-title">Диявол носить<br>Прада 2</h1>
+    
+    <div class="hero-meta">
+      <span class="hero-rating">⭐ 8.4</span>
+      <span>🕐 181 хв</span>
+      <span>🎭 Комедія, Драма</span>
+      <span>🔞 12+</span>
+      <span><div class="live-badge"><div class="live-dot"></div> У кіно зараз</div></span>
+    </div>
+    
+    <p class="hero-description">
+      Довгоочікуване продовження моди. Все що будувалося та змінилось — зійшлося в одній точці. 
+      Не пропустіть найочікуваніший фешн фільм року на великому екрані PavlishFilms.
+    </p>
+    
+    <div class="hero-actions">
+      <a href="pages/schedule.html" class="btn-primary">
+        Купити квиток
+      </a>
+      
+<button class="btn-secondary" data-trailer="./diiavol-nosit-prada-2-oficiinii-ukrayinski_OiMnDcTt.mp4">
+  ▶ Дивитись трейлер
+</button>
+    </div>
+  </div>
+</section>
+
+    <!-- NOW IN CINEMA -->
+    <section>
+      <div class="section-header">
+        <h2 class="section-title">Зараз у кіно</h2>
+        <a href="pages/movies.html" class="section-link">Вся афіша →</a>
+      </div>
+      <div class="movies-grid">
+        <div class="movie-card" data-href="pages/schedule.html">
+          <div class="movie-poster">
+            <div><img src="./diyavol-nosit-prada1.jpeg" alt="prada"></div>
+            <div class="movie-badge">Новинка</div>
+            <div class="movie-rating">⭐ 8.4</div>
+            <div class="movie-poster-overlay">
+              <a href="pages/schedule.html" class="btn-buy-ticket">Купити Квиток</a>
+              <button class="btn-trailer">▶ Трейлер</button>
+            </div>
+          </div>
+          <div class="movie-info">
+            <div class="movie-title">Диявол носить Прада 2</div>
+            <div class="movie-genre">Комедія, Драма</div>
+            <div class="movie-formats">
+              <span class="format-tag format-2d">2D</span>
+              <span class="format-tag format-3d">3D</span>
+              <span class="format-tag format-imax">IMAX</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="movie-card" data-href="pages/schedule.html">
+          <div class="movie-poster">
+            <div><img src="./duna.webp" alt="duna"></div>
+            <div class="movie-rating">⭐ 7.9</div>
+            <div class="movie-poster-overlay">
+              <a href="pages/schedule.html" class="btn-buy-ticket">Купити Квиток</a>
+              <button class="btn-trailer" data-trailer="./трейлери/ytdown-youtube-dune-3-official-trailer-2026-media-ubhiz96w6n8-001-1080p_kimJ7Gg1.mp4">▶ Трейлер</button>
+            </div>
+          </div>
+          <div class="movie-info">
+            <div class="movie-title">Дюна: Частина 2</div>
+            <div class="movie-genre">Фантастика • Пригоди</div>
+            <div class="movie-formats">
+              <span class="format-tag format-2d">2D</span>
+              <span class="format-tag format-imax">IMAX</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="movie-card" data-href="pages/schedule.html">
+          <div class="movie-poster">
+            <div><img src="./mortal.jfif" alt="mortal"></div>
+            <div class="movie-badge badge-gold">ТОП</div>
+            <div class="movie-rating">⭐ 9.1</div>
+            <div class="movie-poster-overlay">
+              <a href="pages/schedule.html" class="btn-buy-ticket">Купити Квиток</a>
+              <button class="btn-trailer" data-trailer="./трейлери/ytdown-youtube-mortal-kombat-2-official-final-trailer-2-media-72fh-e6jvnm-001-10_TXSnvNCp.mp4">▶ Трейлер</button>
+            </div>
+          </div>
+          <div class="movie-info">
+            <div class="movie-title">Mortal Combat 2</div>
+            <div class="movie-genre">Екшн, Пригоди</div>
+            <div class="movie-formats">
+              <span class="format-tag format-3d">3D</span>
+              <span class="format-tag format-4dx">4DX</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="movie-card" data-href="pages/schedule.html">
+          <div class="movie-poster">
+            <div><img src="./maykl.jfif" alt="maylk"></div>
+            <div class="movie-rating">⭐ 7.2</div>
+            <div class="movie-poster-overlay">
+              <a href="pages/schedule.html" class="btn-buy-ticket">Купити Квиток</a>
+              <button class="btn-trailer" data-trailer="./трейлери/ytdown-youtube-michael-official-final-trailer-2026-media-jel06ulwul8-001-1080p_HpMCUUdp.mp4">▶ Трейлер</button>
+            </div>
+          </div>
+          <div class="movie-info">
+            <div class="movie-title">Майкл</div>
+            <div class="movie-genre">Мюзикл, Драма</div>
+            <div class="movie-formats">
+              <span class="format-tag format-2d">2D</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="movie-card" data-href="pages/schedule.html">
+          <div class="movie-poster">
+            <div><img src="./vsesvit.webp" alt="vsesvit"></div>
+            <div class="movie-rating">⭐ 8.7</div>
+            <div class="movie-poster-overlay">
+              <a href="pages/schedule.html" class="btn-buy-ticket">Купити Квиток</a>
+              <button class="btn-trailer" data-trailer="./трейлери/ytdown-youtube-masters-of-the-universe-official-trailer-media-snwnfucbl-0-001-10_L1HUINKO.mp4">▶ Трейлер</button>
+            </div>
+          </div>
+          <div class="movie-info">
+            <div class="movie-title">Володарі Всесвіту</div>
+            <div class="movie-genre">Екшн, Наукова Фантастика</div>
+            <div class="movie-formats">
+              <span class="format-tag format-2d">2D</span>
+              <span class="format-tag format-3d">3D</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="movie-card" data-href="pages/schedule.html">
+          <div class="movie-poster">
+            <div><img src="./da vinci.jfif" alt="da vinci"></div>
+            <div class="movie-badge" style="background:#6366f1">Хіт</div>
+            <div class="movie-rating">⭐ 7.5</div>
+            <div class="movie-poster-overlay">
+              <a href="pages/schedule.html" class="btn-buy-ticket">Купити Квиток</a>
+              <button class="btn-trailer" data-trailer="./трейлери/ytdown-youtube-the-da-vinci-code-official-trailer-2006-media-5su9mt8829k-001-10_mnfcfIyE.mp4">▶ Трейлер</button>
+            </div>
+          </div>
+          <div class="movie-info">
+            <div class="movie-title">Код Да Вінчі</div>
+            <div class="movie-genre">Жахи, Трилер</div>
+            <div class="movie-formats">
+              <span class="format-tag format-2d">2D</span>
+              <span class="format-tag format-3d">3D</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- COMING SOON -->
+    <section>
+      <div class="section-header">
+        <h2 class="section-title">Скоро в прокаті</h2>
+        <a href="pages/movies.html" class="section-link">Усі прем'єри →</a>
+      </div>
+      <div class="movies-grid">
+        <div class="movie-card">
+          <div class="movie-poster">
+            <div><img src="./Angely_i_demony.jpg" alt="angel"></div>
+            <div class="movie-badge badge-soon">Незабаром</div>
+            <div class="movie-poster-overlay">
+              <button class="btn-trailer" data-trailer="./трейлери/ytdown-youtube-angels-demons-in-theaters-5-15-09-media-ekftp1uqg1o-001-1080p_m6Y2mTqE.mp4">▶ Трейлер</button>
+            </div>
+          </div>
+          <div class="movie-info">
+            <div class="movie-title">Ангели і Демони</div>
+            <div class="movie-genre">Містерія, Трилер</div>
+            <div class="movie-formats">
+              <span class="format-tag format-2d">2D</span>
+              <span class="format-tag format-3d">3D</span>
+              <span class="format-tag format-imax">IMAX</span>
+            </div>
+          </div>
+        </div>
+        <div class="movie-card">
+          <div class="movie-poster">
+            <div><img src="./Трансформери_Початок_-_постер.jpg" alt="transformer"></div>
+            <div class="movie-badge badge-soon">Незабаром</div>
+            <div class="movie-poster-overlay">
+              <button class="btn-trailer" data-trailer="./трейлери/ytdown-youtube-transformers-one-official-trailer-2024-h-media-0rmjxxkdrsm-001-10_ZJxefe66.mp4">▶ Трейлер</button>
+            </div>
+          </div>
+          <div class="movie-info">
+            <div class="movie-title">Трансформери: Початок</div>
+            <div class="movie-genre">Екшн, Фантастика</div>
+            <div class="movie-formats">
+              <span class="format-tag format-2d">2D</span>
+            </div>
+          </div>
+        </div>
+        <div class="movie-card">
+          <div class="movie-poster">
+            <div><img src="./sprider.webp" alt="spider"></div>
+            <div class="movie-badge badge-soon">Незабаром</div>
+            <div class="movie-poster-overlay">
+              <button class="btn-trailer" data-trailer="./трейлери/ytdown-youtube-spider-man-brand-new-day-official-traile-media-tt5f0dqowja-001-10_CSfU6tvU.mp4">▶ Трейлер</button>
+            </div>
+          </div>
+          <div class="movie-info">
+            <div class="movie-title">Людина Павук: Абсолютно новий день</div>
+            <div class="movie-genre">Пригоди, Фантастика</div>
+            <div class="movie-formats">
+              <span class="format-tag format-3d">3D</span>
+              <span class="format-tag format-4dx">4DX</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- QUICK INFO -->
+    <section style="margin-bottom:48px">
+      <div class="section-header">
+        <h2 class="section-title">Наш кінотеатр</h2>
+        <a href="pages/about.html" class="section-link">Детальніше →</a>
+      </div>
+      <div class="info-grid">
+        <div class="info-card">
+          <div class="info-icon"><img src="./icons/place-removebg-preview.png" alt="place"></div>
+          <div>
+            <div class="info-title">Адреса</div>
+            <div class="info-text">вул. Городоцька, 222</div>
+            <div class="info-sub">Львів, ТРЦ «Форум Львів»</div>
+          </div>
+        </div>
+        <div class="info-card">
+          <div class="info-icon"><img src="./icons//time-removebg-preview.png" alt="time"></div>
+          <div>
+            <div class="info-title">Графік роботи</div>
+            <div class="info-text">10:00 — 02:00</div>
+            <div class="info-sub">Щодня, без вихідних</div>
+          </div>
+        </div>
+        <div class="info-card">
+          <div class="info-icon"><img src="./icons//phone-removebg-preview.png" alt="phone"></div>
+          <div>
+            <div class="info-title">Телефон</div>
+            <div class="info-text">+38 (032) 123-45-67</div>
+            <div class="info-sub">Гаряча лінія</div>
+          </div>
+        </div>
+        <div class="info-card">
+          <div class="info-icon"><img src="./icons/house-removebg-preview.png" alt="house"></div>
+          <div>
+            <div class="info-title">Зали</div>
+            <div class="info-text">6 залів • 1200 місць</div>
+            <div class="info-sub">IMAX, 4DX, VIP, Стандарт</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+</div>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="footer-top">
+    <div>
+      <div class="footer-brand-name">PAVLISH<span>FILMS</span></div>
+      <p class="footer-brand-desc">Найбільший кінотеатр Львова. Ми пропонуємо незабутній кінодосвід у залах преміум-класу з технологіями IMAX, 4DX та Dolby Atmos.</p>
+      <div class="footer-socials">
+        <a href="https://facebook.com" target="_blank"><img src="./facebook.png" alt="facebook"></a>
+        <a href="https://instagram.com" target="_blank"><img src="./insta.png" alt="insta"></a>
+        <a href="https://t.me" target="_blank"><img src="./telegram.png" alt="telegram"></a>
+        <a href="https://youtube.com" target="_blank"><img src="./youtube.png" alt="youtube"></a>
+      </div>
+    </div>
+    <div class="footer-col">
+      <h4>Фільми</h4>
+      <a href="pages/movies.html">Зараз у кіно</a>
+      <a href="pages/movies.html">Скоро в прокаті</a>
+      <a href="pages/schedule.html">Розклад сеансів</a>
+      <a href="pages/promotions.html">Акції та знижки</a>
+    </div>
+    <div class="footer-col">
+      <h4>Кінотеатр</h4>
+      <a href="pages/halls.html">Наші зали</a>
+      <a href="pages/gallery.html">Галерея</a>
+      <a href="pages/about.html">Про нас</a>
+      <a href="pages/contacts.html">Контакти</a>
+    </div>
+    <div class="footer-col">
+      <h4>Допомога</h4>
+      <a href="#">Повернення квитків</a>
+      <a href="#">Корпоративні замовлення</a>
+      <a href="#">Карта лояльності</a>
+      <a href="#">Подарункові сертифікати</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2026 PavlishFilms. Усі права захищено.</p>
+    <div class="footer-bottom-links">
+      <a href="#">Публічна оферта</a>
+      <a href="#">Конфіденційність</a>
+      <a href="#">Умови використання</a>
+    </div>
+  </div>
+</footer>
+
+<!-- LOGIN MODAL -->
+<div class="modal-overlay" id="loginModal">
+  <div class="modal">
+    <div class="modal-close" onclick="closeModal('loginModal')">✕</div>
+    <div class="modal-title">Вхід до кабінету</div>
+    <div class="modal-subtitle">Увійдіть, щоб переглядати квитки та бонуси</div>
+    <div class="modal-tabs">
+      <div class="modal-tab active">Увійти</div>
+      <div class="modal-tab">Реєстрація</div>
+    </div>
+    <div class="form-group">
+      <label>Email</label>
+      <input type="email" placeholder="your@email.com">
+    </div>
+    <div class="form-group">
+      <label>Пароль</label>
+      <input type="password" placeholder="••••••••">
+    </div>
+    <button class="form-submit" onclick="handleLogin()">Увійти</button>
+    <p style="text-align:center;margin-top:16px;font-size:12px;color:var(--text-muted)">
+      <a href="#" style="color:var(--accent)">Забули пароль?</a>
+    </p>
+  </div>
+</div>
+
+<!-- TRAILER MODAL -->
+<div id="trailerModal" style="display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.85);z-index:9999;align-items:center;justify-content:center;">
+  <div style="max-width:800px;width:90%;position:relative;background:#000;border-radius:12px;overflow:hidden;">
+    <div onclick="closeTrailer()" style="position:absolute;top:10px;right:14px;z-index:10;color:#fff;font-size:20px;cursor:pointer;background:rgba(0,0,0,0.7);border-radius:50%;width:34px;height:34px;display:flex;align-items:center;justify-content:center;">✕</div>
+    <video id="trailerFrame" width="100%" height="450" controls style="display:block;background:#000;"></video>
+  </div>
+</div>
+
+<script src="js/main.js"></script>
+</body>
+</html>
