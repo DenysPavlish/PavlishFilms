@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PavlishFilms — Зали</title>
+  <link rel="shortcut icon" href="./logo.png" type="image/x-icon">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+<nav class="top-nav">
+  <a href="../index.html" class="nav-logo">PAVLISH<span>FILMS</span></a>
+  <div class="nav-links">
+    <a href="../index.html">Головна</a><a href="movies.html">Афіша</a><a href="schedule.html">Розклад</a>
+    <a href="promotions.html">Акції</a><a href="halls.html" class="active">Зали</a>
+    <a href="gallery.html">Галерея</a><a href="about.html">Про нас</a><a href="contacts.html">Контакти</a>
+  </div>
+  <div class="nav-actions">
+    <div class="nav-search"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg><input type="text" placeholder="Знайти фільм..."></div>
+<button class="btn-login" id="loginBtn" onclick="openModal('loginModal')">
+  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+  <span>Увійти</span>
+</button>    <div class="hamburger" id="hamburger"><span></span><span></span><span></span></div>
+  </div>
+</nav>
+<div class="mobile-nav" id="mobileNav">
+  <a href="../index.html">Головна</a><a href="movies.html">Афіша</a><a href="schedule.html"> Розклад</a>
+  <a href="promotions.html"> Акції</a><a href="halls.html"> Зали</a><a href="gallery.html"> Галерея</a>
+  <a href="about.html"> Про нас</a><a href="contacts.html"> Контакти</a>
+</div>
+
+<div class="layout">
+  <aside class="sidebar">
+    <div class="sidebar-section">
+      <div class="sidebar-title">Навігація</div>
+      <div class="sidebar-links">
+        <a href="../index.html"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg>Головна</a>
+        <a href="movies.html"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="2"/><line x1="7" y1="2" x2="7" y2="22"/></svg>Афіша</a>
+        <a href="schedule.html"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="3" y1="10" x2="21" y2="10"/></svg>Розклад</a>
+        <a href="promotions.html"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"/></svg>Акції</a>
+        <a href="halls.html" class="active"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg>Зали</a>
+        <a href="gallery.html"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>Галерея</a>
+        <a href="about.html"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/></svg>Про нас</a>
+        <a href="contacts.html"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.77 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 8.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>Контакти</a>
+      </div>
+    </div>
+    <div class="sidebar-divider"></div>
+    <div class="sidebar-section">
+      <div class="sidebar-title">Соцмережі</div>
+<div class="sidebar-socials">
+            <a href="https://facebook.com" target="_blank" title="Facebook"
+              ><img src="../facebook.png" alt=""
+            /></a>
+            <a href="https://instagram.com" target="_blank" title="Instagram"
+              ><img src="../insta.png" alt=""
+            /></a>
+            <a href="https://t.me" target="_blank" title="Telegram"
+              ><img src="../telegram.png" alt=""
+            /></a>
+            <a href="https://youtube.com" target="_blank" title="YouTube"
+              ><img src="../youtube.png" alt=""
+            /></a>
+          </div>    </div>
+  </aside>
+
+  <main class="main-content">
+    <div class="page-header">
+      <h1>Наші зали</h1>
+      <p>6 залів з найсучаснішим обладнанням для максимального кіно-досвіду</p>
+    </div>
+
+    <!-- Stats -->
+    <div class="info-grid" style="margin-bottom:40px">
+      <div class="info-card"><div class="info-icon">🏛️</div><div><div class="info-title">Кількість залів</div><div class="info-text">6 залів</div></div></div>
+      <div class="info-card"><div class="info-icon">💺</div><div><div class="info-title">Місць загалом</div><div class="info-text">1 200 місць</div></div></div>
+      <div class="info-card"><div class="info-icon">📽️</div><div><div class="info-title">Проектори</div><div class="info-text">4K Laser IMAX</div></div></div>
+      <div class="info-card"><div class="info-icon">🔊</div><div><div class="info-title">Звук</div><div class="info-text">Dolby Atmos</div></div></div>
+    </div>
+
+    <div class="halls-grid">
+      <div class="hall-card">
+        <div class="hall-image" style="background:linear-gradient(135deg,#0a0a1a,#1a0a2e,#2d1b69)"><img src="../image/imax.jpg" alt=""></div>
+        <div class="hall-body">
+          <div class="hall-name">Зал 1 — IMAX</div>
+          <div class="hall-features"><span class="hall-feature">IMAX Laser</span><span class="hall-feature">4K</span><span class="hall-feature">Dolby Atmos</span></div>
+          <div class="hall-desc">Флагманський зал з найбільшим екраном в регіоні. Проектор IMAX Laser 4K забезпечує неперевершену чіткість зображення. Звукова система Dolby Atmos з 64 динаміками занурює у дію.</div>
+          <div class="hall-capacity">💺 320 місць • Екран 26×18 м</div>
+        </div>
+      </div>
+
+      <div class="hall-card">
+        <div class="hall-image" style="background:linear-gradient(135deg,#0f2027,#203a43,#2c5364)"><img src="../image/4dx.jpg" alt=""></div>
+        <div class="hall-body">
+          <div class="hall-name">Зал 2 — 4DX</div>
+          <div class="hall-features"><span class="hall-feature">4DX</span><span class="hall-feature">Рухомі крісла</span><span class="hall-feature">Спецефекти</span></div>
+          <div class="hall-desc">Революційна технологія 4DX: крісла рухаються синхронно з екраном, а спецефекти — вітер, вода, запахи, вібрація — роблять вас учасником подій.</div>
+          <div class="hall-capacity">💺 150 місць • Екран 16×9 м</div>
+        </div>
+      </div>
+
+      <div class="hall-card">
+        <div class="hall-image" style="background:linear-gradient(135deg,#1a1a2e,#16213e,#533483)"><img src="../image/vip.jpg" alt=""></div>
+        <div class="hall-body">
+          <div class="hall-name">Зал 3 — VIP Lounge</div>
+          <div class="hall-features"><span class="hall-feature">VIP</span><span class="hall-feature">Крісла-реклайнери</span><span class="hall-feature">Обслуговування</span></div>
+          <div class="hall-desc">Розкішний VIP-зал з шкіряними кріслами-реклайнерами. Персональне обслуговування, меню від шеф-кухаря прямо на місці. Ідеально для романтичного вечора або ділового перегляду.</div>
+          <div class="hall-capacity">💺 80 місць VIP • Екран 14×8 м</div>
+        </div>
+      </div>
+
+      <div class="hall-card">
+        <div class="hall-image" style="background:linear-gradient(135deg,#134e5e,#71b280)"><img src="../image/standart.jpg" alt=""></div>
+        <div class="hall-body">
+          <div class="hall-name">Зал 4 — Стандарт Плюс</div>
+          <div class="hall-features"><span class="hall-feature">3D</span><span class="hall-feature">Dolby Digital</span><span class="hall-feature">Комфорт</span></div>
+          <div class="hall-desc">Просторий зал з комфортними кріслами та збільшеним простором для ніг. Підходить для сімейного перегляду. Проектор 4K, звук Dolby Digital 7.1.</div>
+          <div class="hall-capacity">💺 250 місць • Екран 20×11 м</div>
+        </div>
+      </div>
+
+      <div class="hall-card">
+        <div class="hall-image"><img src="../image/art.jfif" alt=""></div>
+        <div class="hall-body">
+          <div class="hall-name">Зал 5 — Арт-хаус</div>
+          <div class="hall-features"><span class="hall-feature">2D / 3D</span><span class="hall-feature">Арт-кіно</span><span class="hall-feature">Бар</span></div>
+          <div class="hall-desc">Камерний зал для авторського та фестивального кіно. Унікальна атмосфера, бар з крафтовим пивом та вином. Тут проходять прем'єри та зустрічі з режисерами.</div>
+          <div class="hall-capacity">💺 120 місць • Екран 12×7 м</div>
+        </div>
+      </div>
+
+      <div class="hall-card">
+        <div class="hall-image"><img src="../image/child.jfif" alt=""></div>
+        <div class="hall-body">
+          <div class="hall-name">Зал 6 — Дитячий</div>
+          <div class="hall-features"><span class="hall-feature">2D</span><span class="hall-feature">Дитячі крісла</span><span class="hall-feature">Ігровий куток</span></div>
+          <div class="hall-desc">Спеціальний зал для наймолодших глядачів. Яскравий дизайн, маленькі зручні крісла, знижений рівень гучності. Ігровий куток для очікування сеансу.</div>
+          <div class="hall-capacity">💺 200 місць (вкл. дитячі) • Екран 15×9 м</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Comparison table -->
+    <h2 class="section-title" style="margin-bottom:24px">Порівняння залів</h2>
+    <table class="prices-table" style="margin-bottom:48px">
+      <thead>
+        <tr><th>Зал</th><th>Місць</th><th>Формат</th><th>Екран</th><th>Звук</th><th>Особливості</th></tr>
+      </thead>
+      <tbody>
+        <tr><td><strong>Зал 1 — IMAX</strong></td><td>320</td><td><span class="format-tag format-imax">IMAX</span></td><td>26×18 м</td><td>Dolby Atmos</td><td>Найбільший екран</td></tr>
+        <tr><td><strong>Зал 2 — 4DX</strong></td><td>150</td><td><span class="format-tag format-4dx">4DX</span></td><td>16×9 м</td><td>Dolby Atmos</td><td>Рухомі крісла, ефекти</td></tr>
+        <tr><td><strong>Зал 3 — VIP</strong></td><td>80</td><td><span class="format-tag format-3d">3D</span></td><td>14×8 м</td><td>Dolby Atmos</td><td>Реклайнери, меню</td></tr>
+        <tr><td><strong>Зал 4 — Стандарт+</strong></td><td>250</td><td><span class="format-tag format-3d">3D</span></td><td>20×11 м</td><td>Dolby 7.1</td><td>Простір для ніг</td></tr>
+        <tr><td><strong>Зал 5 — Арт-хаус</strong></td><td>120</td><td><span class="format-tag format-2d">2D</span></td><td>12×7 м</td><td>Стерео</td><td>Бар, фест. кіно</td></tr>
+        <tr><td><strong>Зал 6 — Дитячий</strong></td><td>200</td><td><span class="format-tag format-2d">2D</span></td><td>15×9 м</td><td>Dolby 5.1</td><td>Дитячі крісла</td></tr>
+      </tbody>
+    </table>
+  </main>
+</div>
+
+<footer class="footer">
+  <div class="footer-top">
+    <div><div class="footer-brand-name">PAVLISH<span>FILMS</span></div><p class="footer-brand-desc">Найбільший кінотеатр Львова.</p><div class="footer-socials">
+            <a href="https://facebook.com" target="_blank"
+              ><img src="../facebook.png" alt="facebook"
+            /></a>
+            <a href="https://instagram.com" target="_blank"
+              ><img src="../insta.png" alt="insta"
+            /></a>
+            <a href="https://t.me" target="_blank"
+              ><img src="../telegram.png" alt="telegram"
+            /></a>
+            <a href="https://youtube.com" target="_blank"
+              ><img src="../youtube.png" alt="youtube"
+            /></a>
+          </div>
+    </div>
+    <div class="footer-col"><h4>Фільми</h4><a href="movies.html">Афіша</a><a href="schedule.html">Розклад</a><a href="promotions.html">Акції</a></div>
+    <div class="footer-col"><h4>Кінотеатр</h4><a href="halls.html">Зали</a><a href="gallery.html">Галерея</a><a href="about.html">Про нас</a></div>
+    <div class="footer-col"><h4>Контакти</h4><a href="contacts.html">Написати нам</a></div>
+  </div>
+  <div class="footer-bottom"><p>© 2026 PavlishFilms.</p></div>
+</footer>
+<div class="modal-overlay" id="loginModal"><div class="modal"><div class="modal-close" onclick="closeModal('loginModal')">✕</div><div class="modal-title">Вхід</div><div class="form-group"><label>Email</label><input type="email"></div><div class="form-group"><label>Пароль</label><input type="password"></div><button class="form-submit" onclick="closeModal('loginModal');showToast('Ласкаво просимо!','success')">Увійти</button></div></div>
+<script src="../js/main.js"></script>
+</body>
+</html>

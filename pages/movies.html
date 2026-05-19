@@ -1,0 +1,525 @@
+<!doctype html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PavlishFilms — Афіша</title>
+    <link rel="shortcut icon" href="./logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="../css/style.css" />
+  </head>
+  <body>
+    <nav class="top-nav">
+      <a href="../index.html" class="nav-logo">PAVLISH<span>FILMS</span></a>
+      <div class="nav-links">
+        <a href="../index.html">Головна</a>
+        <a href="movies.html" class="active">Афіша</a>
+        <a href="schedule.html">Розклад</a>
+        <a href="promotions.html">Акції</a>
+        <a href="halls.html">Зали</a>
+        <a href="gallery.html">Галерея</a>
+        <a href="about.html">Про нас</a>
+        <a href="contacts.html">Контакти</a>
+      </div>
+      <div class="nav-actions">
+        <div class="nav-search">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="11" cy="11" r="8" />
+            <line x1="21" y1="21" x2="16.65" y2="16.65" />
+          </svg>
+          <input type="text" placeholder="Знайти фільм..." />
+        </div>
+        <button class="btn-login" onclick="openModal('loginModal')">
+  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+    <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/>
+  </svg>
+  <span>Увійти</span> </button>
+        <div class="hamburger" id="hamburger">
+          <span></span><span></span><span></span>
+        </div>
+      </div>
+    </nav>
+
+<div class="mobile-nav" id="mobileNav">
+  <a href="../index.html">Головна</a><a href="movies.html">Афіша</a><a href="schedule.html"> Розклад</a>
+  <a href="promotions.html"> Акції</a><a href="halls.html"> Зали</a><a href="gallery.html"> Галерея</a>
+  <a href="about.html"> Про нас</a><a href="contacts.html"> Контакти</a>
+</div>
+
+    <div class="layout">
+      <aside class="sidebar">
+        <div class="sidebar-section">
+          <div class="sidebar-title">Навігація</div>
+          <div class="sidebar-links">
+            <a href="../index.html"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg>Головна</a>
+            <a href="movies.html" class="active"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="2"/><line x1="7" y1="2" x2="7" y2="22"/><line x1="17" y1="2" x2="17" y2="22"/><line x1="2" y1="12" x2="22" y2="12"/></svg>Афіша</a>
+            <a href="schedule.html"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>Розклад</a>
+            <a href="promotions.html"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"/><line x1="7" y1="7" x2="7.01" y2="7"/></svg>Акції</a>
+            <a href="halls.html"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg>Зали</a>
+            <a href="gallery.html"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>Галерея</a>
+            <a href="about.html"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>Про нас</a>
+            <a href="contacts.html"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.77 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 8.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>Контакти</a>
+          </div>
+        </div>
+        <div class="sidebar-divider"></div>
+        <div class="sidebar-section">
+          <div class="sidebar-title">Жанри</div>
+          <div class="sidebar-genres">
+            <a href="#" data-genre="Бойовик">Бойовик</a>
+            <a href="#" data-genre="Комедія">Комедія</a>
+            <a href="#" data-genre="Жахи">Жахи</a>
+            <a href="#" data-genre="Фантастика">Фантастика</a>
+            <a href="#" data-genre="Драма">Драма</a>
+            <a href="#" data-genre="Анімація">Анімація</a>
+            <a href="#" data-genre="Мелодрама">Мелодрама</a>
+            <a href="#" data-genre="Трилер">Трилер</a>
+            <a href="#" data-genre="Документальний">Документальний</a>
+          </div>
+        </div>
+        <div class="sidebar-divider"></div>
+        <div class="sidebar-section">
+          <div class="sidebar-title">Ми в соцмережах</div>
+          <div class="sidebar-socials">
+            <a href="https://facebook.com" target="_blank"><img src="../facebook.png" alt=""/></a>
+            <a href="https://instagram.com" target="_blank"><img src="../insta.png" alt=""/></a>
+            <a href="https://t.me" target="_blank"><img src="../telegram.png" alt=""/></a>
+            <a href="https://youtube.com" target="_blank"><img src="../youtube.png" alt=""/></a>
+          </div>
+        </div>
+      </aside>
+
+      <main class="main-content">
+        <div class="page-header">
+          <h1>Афіша</h1>
+          <p>Усі фільми що зараз йдуть та незабаром з'являться в PavlishFilms Львів</p>
+        </div>
+
+        <!-- Фільтри -->
+        <div style="display:flex;gap:10px;margin-bottom:28px;flex-wrap:wrap;align-items:center;">
+          <div style="display:flex;gap:6px;flex-wrap:wrap;">
+            <button onclick="filterByStatus(this,'all')" class="filter-btn active" data-filter="all" style="padding:8px 16px;border-radius:20px;background:var(--accent);color:white;font-size:13px;font-weight:600;transition:var(--transition);cursor:pointer;border:none;">Усі</button>
+            <button onclick="filterByStatus(this,'now')" class="filter-btn" data-filter="now" style="padding:8px 16px;border-radius:20px;background:var(--bg-card);color:var(--text-secondary);font-size:13px;font-weight:600;border:1px solid var(--border);cursor:pointer;transition:var(--transition);">Зараз у кіно</button>
+            <button onclick="filterByStatus(this,'soon')" class="filter-btn" data-filter="soon" style="padding:8px 16px;border-radius:20px;background:var(--bg-card);color:var(--text-secondary);font-size:13px;font-weight:600;border:1px solid var(--border);cursor:pointer;transition:var(--transition);">Скоро</button>
+          </div>
+          <div style="display:flex;gap:6px;flex-wrap:wrap;margin-left:auto;">
+            <select id="genreFilter" style="background:var(--bg-card);border:1px solid var(--border);border-radius:8px;padding:8px 14px;color:var(--text-primary);font-family:inherit;font-size:13px;outline:none;">
+              <option value="">Всі жанри</option>
+              <option value="Фантастика">Фантастика</option>
+              <option value="Бойовик">Бойовик</option>
+              <option value="Комедія">Комедія</option>
+              <option value="Жахи">Жахи</option>
+              <option value="Анімація">Анімація</option>
+              <option value="Мелодрама">Мелодрама</option>
+              <option value="Драма">Драма</option>
+              <option value="Трилер">Трилер</option>
+              <option value="Екшн">Екшн</option>
+              <option value="Мюзикл">Мюзикл</option>
+              <option value="Містерія">Містерія</option>
+              <option value="Пригоди">Пригоди</option>
+              <option value="Спортивний">Спортивний</option>
+            </select>
+            <select id="formatFilter" style="background:var(--bg-card);border:1px solid var(--border);border-radius:8px;padding:8px 14px;color:var(--text-primary);font-family:inherit;font-size:13px;outline:none;">
+              <option value="">Всі формати</option>
+              <option value="2D">2D</option>
+              <option value="3D">3D</option>
+              <option value="IMAX">IMAX</option>
+              <option value="4DX">4DX</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- Повідомлення "нічого не знайдено" -->
+        <div id="noResults" style="display:none;text-align:center;padding:60px 20px;color:var(--text-secondary);">
+          <div style="font-size:48px;margin-bottom:16px;">🎬</div>
+          <div style="font-size:18px;font-weight:600;margin-bottom:8px;">Нічого не знайдено</div>
+          <div style="font-size:14px;">Спробуйте змінити параметри фільтрації</div>
+        </div>
+
+        <h2 class="section-title" id="nowHeading" style="margin-bottom:24px;">Зараз у кіно</h2>
+        <div class="movies-grid" id="nowGrid" style="margin-bottom:48px;">
+
+          <!-- Диявол носить Прада 2 -->
+          <div class="movie-card" data-status="now" data-genre="Комедія,Драма" data-formats="2D,3D,IMAX" data-href="schedule.html">
+            <div class="movie-poster">
+              <img src="../diyavol-nosit-prada1.jpeg" alt="prada">
+              <div class="movie-badge">Новинка</div>
+              <div class="movie-rating">⭐ 8.4</div>
+              <div class="movie-poster-overlay">
+                <a href="schedule.html" class="btn-buy-ticket">Купити Квиток</a>
+                <button class="btn-trailer" data-trailer="../diiavol-nosit-prada-2-oficiinii-ukrayinski_OiMnDcTt.mp4">▶ Трейлер</button>
+              </div>
+            </div>
+            <div class="movie-info">
+              <div class="movie-title">Диявол носить Прада 2</div>
+              <div class="movie-genre">Комедія, Драма</div>
+              <div class="movie-formats">
+                <span class="format-tag format-2d">2D</span>
+                <span class="format-tag format-3d">3D</span>
+                <span class="format-tag format-imax">IMAX</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Дюна -->
+          <div class="movie-card" data-status="now" data-genre="Фантастика,Пригоди" data-formats="2D,IMAX" data-href="schedule.html">
+            <div class="movie-poster">
+              <img src="../duna.webp" alt="duna">
+              <div class="movie-rating">⭐ 7.9</div>
+              <div class="movie-poster-overlay">
+                <a href="schedule.html" class="btn-buy-ticket">Купити Квиток</a>
+                <button class="btn-trailer" data-trailer="../трейлери/ytdown-youtube-dune-3-official-trailer-2026-media-ubhiz96w6n8-001-1080p_kimJ7Gg1.mp4">▶ Трейлер</button>
+              </div>
+            </div>
+            <div class="movie-info">
+              <div class="movie-title">Дюна: Частина 2</div>
+              <div class="movie-genre">Фантастика • Пригоди</div>
+              <div class="movie-formats">
+                <span class="format-tag format-2d">2D</span>
+                <span class="format-tag format-imax">IMAX</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Mortal Combat 2 -->
+          <div class="movie-card" data-status="now" data-genre="Екшн,Пригоди" data-formats="3D,4DX" data-href="schedule.html">
+            <div class="movie-poster">
+              <img src="../mortal.jfif" alt="mortal">
+              <div class="movie-badge badge-gold">ТОП</div>
+              <div class="movie-rating">⭐ 9.1</div>
+              <div class="movie-poster-overlay">
+                <a href="schedule.html" class="btn-buy-ticket">Купити Квиток</a>
+                <button class="btn-trailer" data-trailer="../трейлери/ytdown-youtube-mortal-kombat-2-official-final-trailer-2-media-72fh-e6jvnm-001-10_TXSnvNCp.mp4">▶ Трейлер</button>
+              </div>
+            </div>
+            <div class="movie-info">
+              <div class="movie-title">Mortal Combat 2</div>
+              <div class="movie-genre">Екшн, Пригоди</div>
+              <div class="movie-formats">
+                <span class="format-tag format-3d">3D</span>
+                <span class="format-tag format-4dx">4DX</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Майкл -->
+          <div class="movie-card" data-status="now" data-genre="Мюзикл,Драма" data-formats="2D" data-href="schedule.html">
+            <div class="movie-poster">
+              <img src="../maykl.jfif" alt="maykl">
+              <div class="movie-rating">⭐ 7.2</div>
+              <div class="movie-poster-overlay">
+                <a href="schedule.html" class="btn-buy-ticket">Купити Квиток</a>
+                <button class="btn-trailer" data-trailer="../трейлери/ytdown-youtube-michael-official-final-trailer-2026-media-jel06ulwul8-001-1080p_HpMCUUdp.mp4">▶ Трейлер</button>
+              </div>
+            </div>
+            <div class="movie-info">
+              <div class="movie-title">Майкл</div>
+              <div class="movie-genre">Мюзикл, Драма</div>
+              <div class="movie-formats">
+                <span class="format-tag format-2d">2D</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Володарі Всесвіту -->
+          <div class="movie-card" data-status="now" data-genre="Екшн,Фантастика" data-formats="2D,3D" data-href="schedule.html">
+            <div class="movie-poster">
+              <img src="../vsesvit.webp" alt="vsesvit">
+              <div class="movie-rating">⭐ 8.7</div>
+              <div class="movie-poster-overlay">
+                <a href="schedule.html" class="btn-buy-ticket">Купити Квиток</a>
+                <button class="btn-trailer" data-trailer="../трейлери/ytdown-youtube-masters-of-the-universe-official-trailer-media-snwnfucbl-0-001-10_L1HUINKO.mp4">▶ Трейлер</button>
+              </div>
+            </div>
+            <div class="movie-info">
+              <div class="movie-title">Володарі Всесвіту</div>
+              <div class="movie-genre">Екшн, Наукова Фантастика</div>
+              <div class="movie-formats">
+                <span class="format-tag format-2d">2D</span>
+                <span class="format-tag format-3d">3D</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Код Да Вінчі -->
+          <div class="movie-card" data-status="now" data-genre="Жахи,Трилер" data-formats="2D,3D" data-href="schedule.html">
+            <div class="movie-poster">
+              <img src="../da vinci.jfif" alt="da vinci">
+              <div class="movie-badge" style="background:#6366f1">Хіт</div>
+              <div class="movie-rating">⭐ 7.5</div>
+              <div class="movie-poster-overlay">
+                <a href="schedule.html" class="btn-buy-ticket">Купити Квиток</a>
+                <button class="btn-trailer" data-trailer="../трейлери/ytdown-youtube-the-da-vinci-code-official-trailer-2006-media-5su9mt8829k-001-10_mnfcfIyE.mp4">▶ Трейлер</button>
+              </div>
+            </div>
+            <div class="movie-info">
+              <div class="movie-title">Код Да Вінчі</div>
+              <div class="movie-genre">Жахи, Трилер</div>
+              <div class="movie-formats">
+                <span class="format-tag format-2d">2D</span>
+                <span class="format-tag format-3d">3D</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Фантастичні звірі -->
+          <div class="movie-card" data-status="now" data-genre="Фантастика,Пригоди" data-formats="3D,IMAX" data-href="schedule.html">
+            <div class="movie-poster">
+              <img src="../animals.jfif" alt="animals">
+              <div class="movie-rating">⭐ 6.8</div>
+              <div class="movie-poster-overlay">
+                <a href="schedule.html" class="btn-buy-ticket">Купити Квиток</a>
+                <button class="btn-trailer" data-trailer="../трейлери/ytdown-youtube-fantastic-beasts-the-secrets-of-dumbledo-media-fo6tfhklw6y-001-10_G7Y5Yg4L.mp4">▶ Трейлер</button>
+              </div>
+            </div>
+            <div class="movie-info">
+              <div class="movie-title">Фантастичні звірі: Таємниці Дамблдора</div>
+              <div class="movie-genre">Фантастика, Пригоди</div>
+              <div class="movie-formats">
+                <span class="format-tag format-3d">3D</span>
+                <span class="format-tag format-imax">IMAX</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Гран Туризмо -->
+          <div class="movie-card" data-status="now" data-genre="Спортивний,Екшн" data-formats="2D,3D" data-href="schedule.html">
+            <div class="movie-poster">
+              <img src="../turizmo.jpg" alt="gran">
+              <div class="movie-rating">⭐ 8.9</div>
+              <div class="movie-poster-overlay">
+                <a href="schedule.html" class="btn-buy-ticket">Купити Квиток</a>
+                <button class="btn-trailer" data-trailer="../трейлери/ytdown-youtube-gran-turismo-official-trailer-hd-media-gvpzgbvprzw-001-1080p_MwtaEXXF.mp4">▶ Трейлер</button>
+              </div>
+            </div>
+            <div class="movie-info">
+              <div class="movie-title">Гран Туризмо</div>
+              <div class="movie-genre">Спортивний, Екшн</div>
+              <div class="movie-formats">
+                <span class="format-tag format-2d">2D</span>
+                <span class="format-tag format-3d">3D</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <h2 class="section-title" id="soonHeading" style="margin-bottom:24px;">Незабаром</h2>
+        <div class="movies-grid" id="soonGrid">
+
+          <!-- Ангели і Демони -->
+          <div class="movie-card" data-status="soon" data-genre="Містерія,Трилер" data-formats="2D,3D,IMAX">
+            <div class="movie-poster">
+              <img src="../Angely_i_demony.jpg" alt="angel">
+              <div class="movie-badge badge-soon">Незабаром</div>
+              <div class="movie-poster-overlay">
+                <button class="btn-trailer" data-trailer="../трейлери/ytdown-youtube-angels-demons-in-theaters-5-15-09-media-ekftp1uqg1o-001-1080p_m6Y2mTqE.mp4">▶ Трейлер</button>
+              </div>
+            </div>
+            <div class="movie-info">
+              <div class="movie-title">Ангели і Демони</div>
+              <div class="movie-genre">Містерія, Трилер</div>
+              <div class="movie-formats">
+                <span class="format-tag format-2d">2D</span>
+                <span class="format-tag format-3d">3D</span>
+                <span class="format-tag format-imax">IMAX</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Трансформери -->
+          <div class="movie-card" data-status="soon" data-genre="Екшн,Фантастика" data-formats="2D">
+            <div class="movie-poster">
+              <img src="../Трансформери_Початок_-_постер.jpg" alt="transformer">
+              <div class="movie-badge badge-soon">Незабаром</div>
+              <div class="movie-poster-overlay">
+                <button class="btn-trailer" data-trailer="../трейлери/ytdown-youtube-transformers-one-official-trailer-2024-h-media-0rmjxxkdrsm-001-10_ZJxefe66.mp4">▶ Трейлер</button>
+              </div>
+            </div>
+            <div class="movie-info">
+              <div class="movie-title">Трансформери: Початок</div>
+              <div class="movie-genre">Екшн, Фантастика</div>
+              <div class="movie-formats">
+                <span class="format-tag format-2d">2D</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Людина Павук -->
+          <div class="movie-card" data-status="soon" data-genre="Пригоди,Фантастика" data-formats="3D,4DX">
+            <div class="movie-poster">
+              <img src="../sprider.webp" alt="spider">
+              <div class="movie-badge badge-soon">Незабаром</div>
+              <div class="movie-poster-overlay">
+                <button class="btn-trailer" data-trailer="../трейлери/ytdown-youtube-spider-man-brand-new-day-official-traile-media-tt5f0dqowja-001-10_CSfU6tvU.mp4">▶ Трейлер</button>
+              </div>
+            </div>
+            <div class="movie-info">
+              <div class="movie-title">Людина Павук: Абсолютно новий день</div>
+              <div class="movie-genre">Пригоди, Фантастика</div>
+              <div class="movie-formats">
+                <span class="format-tag format-3d">3D</span>
+                <span class="format-tag format-4dx">4DX</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Опенгеймер -->
+          <div class="movie-card" data-status="soon" data-genre="Трилер" data-formats="IMAX">
+            <div class="movie-poster">
+              <img src="../openheimer.webp" alt="openheimer">
+              <div class="movie-badge badge-soon">14 лютого</div>
+              <div class="movie-poster-overlay">
+                <button class="btn-trailer" data-trailer="../трейлери/ytdown-youtube-oppenheimer-official-trailer-media-qaweb0h43lu-001-1080p_a9q5BUOB.mp4">▶ Трейлер</button>
+              </div>
+            </div>
+            <div class="movie-info">
+              <div class="movie-title">Опенгеймер</div>
+              <div class="movie-genre">Трилер</div>
+              <div class="movie-formats">
+                <span class="format-tag format-imax">IMAX</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </main>
+    </div>
+
+    <footer class="footer">
+      <div class="footer-top">
+        <div>
+          <div class="footer-brand-name">PAVLISH<span>FILMS</span></div>
+          <p class="footer-brand-desc">Найбільший кінотеатр Львова. Ми пропонуємо незабутній кінодосвід у залах преміум-класу з технологіями IMAX, 4DX та Dolby Atmos.</p>
+          <div class="footer-socials">
+            <a href="https://facebook.com" target="_blank"><img src="../facebook.png" alt="facebook"/></a>
+            <a href="https://instagram.com" target="_blank"><img src="../insta.png" alt="insta"/></a>
+            <a href="https://t.me" target="_blank"><img src="../telegram.png" alt="telegram"/></a>
+            <a href="https://youtube.com" target="_blank"><img src="../youtube.png" alt="youtube"/></a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Фільми</h4>
+          <a href="movies.html">Зараз у кіно</a>
+          <a href="movies.html">Скоро в прокаті</a>
+          <a href="schedule.html">Розклад сеансів</a>
+          <a href="promotions.html">Акції та знижки</a>
+        </div>
+        <div class="footer-col">
+          <h4>Кінотеатр</h4>
+          <a href="halls.html">Наші зали</a>
+          <a href="gallery.html">Галерея</a>
+          <a href="about.html">Про нас</a>
+          <a href="contacts.html">Контакти</a>
+        </div>
+        <div class="footer-col">
+          <h4>Допомога</h4>
+          <a href="#">Повернення квитків</a>
+          <a href="#">Корпоративні замовлення</a>
+          <a href="#">Карта лояльності</a>
+          <a href="#">Подарункові сертифікати</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2026 PavlishFilms. Усі права захищено.</p>
+        <div class="footer-bottom-links">
+          <a href="#">Публічна оферта</a>
+          <a href="#">Конфіденційність</a>
+          <a href="#">Умови використання</a>
+        </div>
+      </div>
+    </footer>
+
+    <div class="modal-overlay" id="loginModal">
+      <div class="modal">
+        <div class="modal-close" onclick="closeModal('loginModal')">✕</div>
+        <div class="modal-title">Вхід</div>
+        <div class="form-group">
+          <label>Email</label>
+          <input type="email" placeholder="your@email.com"/>
+        </div>
+        <div class="form-group">
+          <label>Пароль</label>
+          <input type="password" placeholder="••••••••"/>
+        </div>
+        <button class="form-submit" onclick="closeModal('loginModal');showToast('Ласкаво просимо!','success')">Увійти</button>
+      </div>
+    </div>
+
+    <!-- TRAILER MODAL -->
+    <div id="trailerModal" style="display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.85);z-index:9999;align-items:center;justify-content:center;">
+      <div style="max-width:800px;width:90%;position:relative;background:#000;border-radius:12px;overflow:hidden;">
+        <div onclick="closeTrailer()" style="position:absolute;top:10px;right:14px;z-index:10;color:#fff;font-size:20px;cursor:pointer;background:rgba(0,0,0,0.7);border-radius:50%;width:34px;height:34px;display:flex;align-items:center;justify-content:center;">✕</div>
+        <video id="trailerFrame" width="100%" height="450" controls style="display:block;background:#000;"></video>
+      </div>
+    </div>
+
+    <script src="../js/main.js"></script>
+    <script>
+      // ===== ФІЛЬТРАЦІЯ =====
+      let currentStatus = 'all';
+
+      function applyFilters() {
+        const genreVal  = document.getElementById('genreFilter').value;
+        const formatVal = document.getElementById('formatFilter').value;
+
+        let nowVisible  = 0;
+        let soonVisible = 0;
+
+        document.querySelectorAll('.movie-card').forEach(card => {
+          const statusOk = currentStatus === 'all' || card.dataset.status === currentStatus;
+
+          const cardGenres = (card.dataset.genre || '').split(',').map(g => g.trim().toLowerCase());
+          const genreOk    = !genreVal || cardGenres.some(g => g.includes(genreVal.toLowerCase()));
+
+          const cardFormats = (card.dataset.formats || '').split(',').map(f => f.trim());
+          const formatOk    = !formatVal || cardFormats.includes(formatVal);
+
+          const visible = statusOk && genreOk && formatOk;
+          card.style.display = visible ? '' : 'none';
+
+          if (visible) {
+            if (card.dataset.status === 'now')  nowVisible++;
+            if (card.dataset.status === 'soon') soonVisible++;
+          }
+        });
+
+        const nowH  = document.getElementById('nowHeading');
+        const nowG  = document.getElementById('nowGrid');
+        const soonH = document.getElementById('soonHeading');
+        const soonG = document.getElementById('soonGrid');
+
+        nowH.style.display  = nowVisible  > 0 ? '' : 'none';
+        nowG.style.display  = nowVisible  > 0 ? '' : 'none';
+        soonH.style.display = soonVisible > 0 ? '' : 'none';
+        soonG.style.display = soonVisible > 0 ? '' : 'none';
+
+        document.getElementById('noResults').style.display =
+          (nowVisible + soonVisible === 0) ? 'block' : 'none';
+      }
+
+      function filterByStatus(btn, status) {
+        currentStatus = status;
+        document.querySelectorAll('.filter-btn').forEach(b => {
+          b.style.background = 'var(--bg-card)';
+          b.style.color      = 'var(--text-secondary)';
+        });
+        btn.style.background = 'var(--accent)';
+        btn.style.color      = 'white';
+        applyFilters();
+      }
+
+      document.getElementById('genreFilter').addEventListener('change', applyFilters);
+      document.getElementById('formatFilter').addEventListener('change', applyFilters);
+
+      document.querySelectorAll('.sidebar-genres a[data-genre]').forEach(link => {
+        link.addEventListener('click', e => {
+          e.preventDefault();
+          const genre = link.dataset.genre;
+          const select = document.getElementById('genreFilter');
+          select.value = select.value === genre ? '' : genre;
+          applyFilters();
+          document.querySelector('.main-content').scrollIntoView({ behavior: 'smooth' });
+        });
+      });
+    </script>
+  </body>
+</html>
