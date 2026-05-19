@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PavlishFilms — Акції та знижки</title>
+  <link rel="shortcut icon" href="./logo.png" type="image/x-icon">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+<nav class="top-nav">
+  <a href="../index.html" class="nav-logo">PAVLISH<span>FILMS</span></a>
+  <div class="nav-links">
+    <a href="../index.html">Головна</a><a href="movies.html">Афіша</a><a href="schedule.html">Розклад</a>
+    <a href="promotions.html" class="active">Акції</a><a href="halls.html">Зали</a>
+    <a href="gallery.html">Галерея</a><a href="about.html">Про нас</a><a href="contacts.html">Контакти</a>
+  </div>
+  <div class="nav-actions">
+    <div class="nav-search"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg><input type="text" placeholder="Знайти фільм..."></div>
+<button class="btn-login" id="loginBtn" onclick="openModal('loginModal')">
+  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+  <span>Увійти</span>
+</button>    <div class="hamburger" id="hamburger"><span></span><span></span><span></span></div>
+  </div>
+</nav>
+<div class="mobile-nav" id="mobileNav">
+  <a href="../index.html">Головна</a><a href="movies.html">Афіша</a><a href="schedule.html"> Розклад</a>
+  <a href="promotions.html"> Акції</a><a href="halls.html"> Зали</a><a href="gallery.html"> Галерея</a>
+  <a href="about.html"> Про нас</a><a href="contacts.html"> Контакти</a>
+</div>
+
+<div class="layout">
+  <aside class="sidebar">
+    <div class="sidebar-section">
+      <div class="sidebar-title">Навігація</div>
+      <div class="sidebar-links">
+        <a href="../index.html"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg>Головна</a>
+        <a href="movies.html"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="2"/><line x1="7" y1="2" x2="7" y2="22"/><line x1="17" y1="2" x2="17" y2="22"/><line x1="2" y1="12" x2="22" y2="12"/></svg>Афіша</a>
+        <a href="schedule.html"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>Розклад</a>
+        <a href="promotions.html" class="active"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"/><line x1="7" y1="7" x2="7.01" y2="7"/></svg>Акції</a>
+        <a href="halls.html"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg>Зали</a>
+        <a href="contacts.html"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.77 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 8.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>Контакти</a>
+      </div>
+    </div>
+    <div class="sidebar-divider"></div>
+    <div class="sidebar-section">
+      <div class="sidebar-title">Соцмережі</div>
+<div class="sidebar-socials">
+            <a href="https://facebook.com" target="_blank" title="Facebook"
+              ><img src="../facebook.png" alt=""
+            /></a>
+            <a href="https://instagram.com" target="_blank" title="Instagram"
+              ><img src="../insta.png" alt=""
+            /></a>
+            <a href="https://t.me" target="_blank" title="Telegram"
+              ><img src="../telegram.png" alt=""
+            /></a>
+            <a href="https://youtube.com" target="_blank" title="YouTube"
+              ><img src="../youtube.png" alt=""
+            /></a>
+          </div>    </div>
+  </aside>
+
+  <main class="main-content">
+    <div class="page-header">
+      <h1>Акції та знижки</h1>
+      <p>Вигідні пропозиції та спеціальні умови для наших глядачів</p>
+    </div>
+
+    <!-- Banner promo -->
+    <div style="background:linear-gradient(135deg,#e50914,#c94b4b);border-radius:var(--radius);padding:36px;margin-bottom:40px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:20px">
+      <div>
+        <div style="font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:2px;opacity:0.8;margin-bottom:8px">🔥 Головна акція місяця</div>
+        <h2 style="font-family:var(--font-display);font-size:36px;letter-spacing:2px;margin-bottom:8px">2 ЗА ЦІНОЮ 1</h2>
+        <p style="font-size:15px;opacity:0.9;max-width:400px">Кожен вівторок: купи один квиток — отримай другий безкоштовно. Діє на всі сеанси до 18:00.</p>
+        <div style="margin-top:16px;font-size:13px;opacity:0.7" data-deadline="2025-12-31">Завантаження...</div>
+      </div>
+    </div>
+
+    <div class="promos-grid">
+      <div class="promo-card">
+        <div class="promo-image"><img src="../image/kvytok.jpg" alt=""></div>
+        <div class="promo-body">
+          <div class="promo-tag">Постійна</div>
+          <div class="promo-title">Студентська знижка</div>
+          <div class="promo-description">Покажи студентський квиток і отримай 30% знижку на будь-який сеанс. Діє щодня, на всі зали.</div>
+          <a href="schedule.html" class="btn-primary" style="font-size:12px;padding:10px 18px">Купити зі знижкою</a>
+        </div>
+      </div>
+
+      <div class="promo-card">
+        <div class="promo-image"><img src="../image/family.jfif" alt=""></div>
+        <div class="promo-body">
+          <div class="promo-tag">Вихідні</div>
+          <div class="promo-title">Сімейний вікенд</div>
+          <div class="promo-description">Сб та Нд: квиток для дитини до 12 років — 50% від вартості. При купівлі від 3 квитків — попкорн у подарунок!</div>
+          <a href="schedule.html" class="btn-primary" style="font-size:12px;padding:10px 18px">Деталі акції</a>
+        </div>
+      </div>
+
+      <div class="promo-card">
+        <div class="promo-image"><img src="../image//Nightn.jpg" alt=""></div>
+        <div class="promo-body">
+          <div class="promo-tag">Щодня</div>
+          <div class="promo-title">Нічний сеанс</div>
+          <div class="promo-description">Всі сеанси після 22:00 — мінус 40% від стандартної ціни. Ідеально для нічних любителів кіно!</div>
+          <a href="schedule.html" class="btn-primary" style="font-size:12px;padding:10px 18px">Вибрати сеанс</a>
+        </div>
+      </div>
+
+      <div class="promo-card">
+        <div class="promo-image"><img src="../image/happy-birthday.jpg" alt=""></div>
+        <div class="promo-body">
+          <div class="promo-tag">Особлива</div>
+          <div class="promo-title">Квиток на день народження</div>
+          <div class="promo-description">У день свого народження та 3 дні після — безкоштовний квиток! Покажи документ при вході.</div>
+          <a href="contacts.html" class="btn-primary" style="font-size:12px;padding:10px 18px">Дізнатись більше</a>
+        </div>
+      </div>
+
+      <div class="promo-card">
+        <div class="promo-image"><img src="../image/business-in.webp" alt=""></div>
+        <div class="promo-body">
+          <div class="promo-tag">Корпоративна</div>
+          <div class="promo-title">Для бізнесу</div>
+          <div class="promo-description">Корпоративні квитки для компаній від 10 осіб — знижка 20-35%. Індивідуальний менеджер та рахунок-фактура.</div>
+          <a href="contacts.html" class="btn-primary" style="font-size:12px;padding:10px 18px">Замовити</a>
+        </div>
+      </div>
+
+      <div class="promo-card">
+        <div class="promo-image"><img src="../image/karta.jpg" alt=""></div>
+        <div class="promo-body">
+          <div class="promo-tag">Постійна</div>
+          <div class="promo-title">Картка PavlishFilms Club</div>
+          <div class="promo-description">Накопичуй бонуси з кожного відвідування. 10 балів = 1 грн знижки. Учасники клубу отримують ексклюзивні пропозиції.</div>
+          <a href="#" class="btn-primary" onclick="openModal('loginModal');return false" style="font-size:12px;padding:10px 18px">Приєднатись</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Prices table -->
+    <h2 class="section-title" style="margin-bottom:24px">Прейскурант цін</h2>
+    <table class="prices-table">
+      <thead>
+        <tr>
+          <th>Категорія</th>
+          <th>Формат</th>
+          <th>Пн–Чт до 18:00</th>
+          <th>Пн–Чт після 18:00</th>
+          <th>Пт–Нд та свята</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>Стандарт</td><td><span class="format-tag format-2d">2D</span></td><td><span class="price-amount">80</span><span class="price-format"> грн</span></td><td><span class="price-amount">100</span><span class="price-format"> грн</span></td><td><span class="price-amount">120</span><span class="price-format"> грн</span></td></tr>
+        <tr><td>Стандарт</td><td><span class="format-tag format-3d">3D</span></td><td><span class="price-amount">110</span><span class="price-format"> грн</span></td><td><span class="price-amount">130</span><span class="price-format"> грн</span></td><td><span class="price-amount">150</span><span class="price-format"> грн</span></td></tr>
+        <tr><td>IMAX Лазер</td><td><span class="format-tag format-imax">IMAX</span></td><td><span class="price-amount">160</span><span class="price-format"> грн</span></td><td><span class="price-amount">180</span><span class="price-format"> грн</span></td><td><span class="price-amount">220</span><span class="price-format"> грн</span></td></tr>
+        <tr><td>4DX</td><td><span class="format-tag format-4dx">4DX</span></td><td><span class="price-amount">190</span><span class="price-format"> грн</span></td><td><span class="price-amount">210</span><span class="price-format"> грн</span></td><td><span class="price-amount">250</span><span class="price-format"> грн</span></td></tr>
+        <tr><td>VIP зал</td><td><span class="format-tag format-2d">2D</span></td><td><span class="price-amount">200</span><span class="price-format"> грн</span></td><td><span class="price-amount">230</span><span class="price-format"> грн</span></td><td><span class="price-amount">280</span><span class="price-format"> грн</span></td></tr>
+        <tr><td>Дитячий (до 12 р.)</td><td><span class="format-tag format-2d">2D</span></td><td><span class="price-amount">50</span><span class="price-format"> грн</span></td><td><span class="price-amount">60</span><span class="price-format"> грн</span></td><td><span class="price-amount">70</span><span class="price-format"> грн</span></td></tr>
+        <tr><td>Пенсіонери</td><td>Будь-який</td><td><span class="price-amount">60</span><span class="price-format"> грн</span></td><td><span class="price-amount">70</span><span class="price-format"> грн</span></td><td><span class="price-amount">80</span><span class="price-format"> грн</span></td></tr>
+      </tbody>
+    </table>
+  </main>
+</div>
+
+<footer class="footer">
+  <div class="footer-top">
+    <div><div class="footer-brand-name">PAVLISH<span>FILMS</span></div><p class="footer-brand-desc">Найбільший кінотеатр Львова.</p><div class="footer-socials">
+            <a href="https://facebook.com" target="_blank"
+              ><img src="../facebook.png" alt="facebook"
+            /></a>
+            <a href="https://instagram.com" target="_blank"
+              ><img src="../insta.png" alt="insta"
+            /></a>
+            <a href="https://t.me" target="_blank"
+              ><img src="../telegram.png" alt="telegram"
+            /></a>
+            <a href="https://youtube.com" target="_blank"
+              ><img src="../youtube.png" alt="youtube"
+            /></a>
+          </div></div>
+    <div class="footer-col"><h4>Фільми</h4><a href="movies.html">Афіша</a><a href="schedule.html">Розклад</a></div>
+    <div class="footer-col"><h4>Кінотеатр</h4><a href="halls.html">Зали</a><a href="about.html">Про нас</a></div>
+    <div class="footer-col"><h4>Контакти</h4><a href="contacts.html">Написати</a></div>
+  </div>
+  <div class="footer-bottom"><p>© 2026 PavlishFilms.</p></div>
+</footer>
+
+<div class="modal-overlay" id="loginModal"><div class="modal"><div class="modal-close" onclick="closeModal('loginModal')">✕</div><div class="modal-title">Приєднатись до PavlishFilms Club</div><div class="form-group"><label>Ім'я</label><input type="text" placeholder="Ваше ім'я"></div><div class="form-group"><label>Email</label><input type="email" placeholder="your@email.com"></div><div class="form-group"><label>Пароль</label><input type="password" placeholder="••••••••"></div><button class="form-submit" onclick="closeModal('loginModal');showToast('Ви стали учасником PavlishFilms Club! ','success')">Зареєструватись</button></div></div>
+
+<script src="../js/main.js"></script>
+</body>
+</html>

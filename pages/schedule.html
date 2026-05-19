@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PavlishFilms — Розклад</title>
+  <link rel="shortcut icon" href="./logo.png" type="image/x-icon">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+<nav class="top-nav">
+  <a href="../index.html" class="nav-logo">PAVLISH<span>FILMS</span></a>
+  <div class="nav-links">
+    <a href="../index.html">Головна</a><a href="movies.html">Афіша</a>
+    <a href="schedule.html" class="active">Розклад</a><a href="promotions.html">Акції</a>
+    <a href="halls.html">Зали</a><a href="gallery.html">Галерея</a>
+    <a href="about.html">Про нас</a><a href="contacts.html">Контакти</a>
+  </div>
+  <div class="nav-actions">
+    <div class="nav-search"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg><input type="text" placeholder="Знайти фільм..."></div>
+<button class="btn-login" id="loginBtn" onclick="openModal('loginModal')">
+  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+  <span>Увійти</span>
+</button>    <div class="hamburger" id="hamburger"><span></span><span></span><span></span></div>
+  </div>
+</nav>
+<div class="mobile-nav" id="mobileNav">
+  <a href="../index.html">Головна</a><a href="movies.html">Афіша</a><a href="schedule.html"> Розклад</a>
+  <a href="promotions.html"> Акції</a><a href="halls.html"> Зали</a><a href="gallery.html"> Галерея</a>
+  <a href="about.html"> Про нас</a><a href="contacts.html"> Контакти</a>
+</div>
+
+<div class="layout">
+  <aside class="sidebar">
+    <div class="sidebar-section">
+      <div class="sidebar-title">Навігація</div>
+      <div class="sidebar-links">
+        <a href="../index.html"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg>Головна</a>
+        <a href="movies.html"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="2"/><line x1="7" y1="2" x2="7" y2="22"/><line x1="17" y1="2" x2="17" y2="22"/><line x1="2" y1="12" x2="22" y2="12"/></svg>Афіша</a>
+        <a href="schedule.html" class="active"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>Розклад</a>
+        <a href="promotions.html"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"/><line x1="7" y1="7" x2="7.01" y2="7"/></svg>Акції</a>
+        <a href="halls.html"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg>Зали</a>
+        <a href="contacts.html"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.77 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 8.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>Контакти</a>
+      </div>
+    </div>
+    <div class="sidebar-divider"></div>
+    <div class="sidebar-section">
+      <div class="sidebar-title">Ціни від</div>
+      <div style="padding:0 8px">
+        <div style="margin-bottom:10px"><div style="font-size:12px;color:var(--text-muted);margin-bottom:2px">Стандарт 2D</div><div style="font-size:18px;font-weight:800;color:var(--accent-gold)">80 грн</div></div>
+        <div style="margin-bottom:10px"><div style="font-size:12px;color:var(--text-muted);margin-bottom:2px">Стандарт 3D</div><div style="font-size:18px;font-weight:800;color:var(--accent-gold)">120 грн</div></div>
+        <div style="margin-bottom:10px"><div style="font-size:12px;color:var(--text-muted);margin-bottom:2px">IMAX</div><div style="font-size:18px;font-weight:800;color:var(--accent-gold)">180 грн</div></div>
+        <div><div style="font-size:12px;color:var(--text-muted);margin-bottom:2px">VIP</div><div style="font-size:18px;font-weight:800;color:var(--accent-gold)">250 грн</div></div>
+      </div>
+    </div>
+    <div class="sidebar-divider"></div>
+    <div class="sidebar-section">
+      <div class="sidebar-title">Соцмережі</div>
+      <div class="sidebar-socials">
+        <a href="https://facebook.com" target="_blank" title="Facebook"><img src="../facebook.png" alt=""></a>
+        <a href="https://instagram.com" target="_blank" title="Instagram"><img src="../insta.png" alt=""></a>
+        <a href="https://t.me" target="_blank" title="Telegram"><img src="../telegram.png" alt=""></a>
+        <a href="https://youtube.com" target="_blank" title="YouTube"><img src="../youtube.png" alt=""></a>
+      </div>
+    </div>
+  </aside>
+
+  <main class="main-content">
+    <div class="page-header">
+      <h1>Розклад сеансів</h1>
+      <p>Оберіть дату, фільм та зручний час — і отримайте квитки онлайн</p>
+    </div>
+
+    <!-- Date tabs -->
+    <div class="date-tabs" id="dateTabs">
+      <div class="date-tab active" data-date="16"><div class="date-day">16</div><div class="date-weekday">Сб</div></div>
+      <div class="date-tab" data-date="17"><div class="date-day">17</div><div class="date-weekday">Нд</div></div>
+      <div class="date-tab" data-date="18"><div class="date-day">18</div><div class="date-weekday">Пн</div></div>
+      <div class="date-tab" data-date="19"><div class="date-day">19</div><div class="date-weekday">Вт</div></div>
+      <div class="date-tab" data-date="20"><div class="date-day">20</div><div class="date-weekday">Ср</div></div>
+      <div class="date-tab" data-date="21"><div class="date-day">21</div><div class="date-weekday">Чт</div></div>
+      <div class="date-tab" data-date="22"><div class="date-day">22</div><div class="date-weekday">Пт</div></div>
+    </div>
+
+    <div class="schedule-section">
+      <table class="schedule-table">
+        <thead>
+          <tr>
+            <th>Фільм</th>
+            <th>Зал</th>
+            <th>Формат</th>
+            <th>Час сеансів</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><div class="schedule-movie-info"><div style="width:48px;height:72px;border-radius:6px;display:flex;align-items:center;justify-content:center;font-size:28px;flex-shrink:0"><img src="../diyavol-nosit-prada1.jpeg" alt=""></div><div><div class="schedule-movie-name">Диявол носить Прада 2</div><div class="schedule-movie-genre">Комедія, Драма • 181 хв</div><div style="margin-top:4px;font-size:11px;color:var(--text-muted)">⭐ 8.4 • 12+</div></div></div></td>
+            <td style="white-space:nowrap;font-size:13px;color:var(--text-secondary)">Зал 1<br><small>IMAX</small></td>
+            <td><span class="format-tag format-imax">IMAX</span></td>
+            <td><div class="time-slots"><div class="time-slot" onclick="openBuyModal('Диявол носить Прада 2','10:30','IMAX')">10:30</div><div class="time-slot" onclick="openBuyModal('Диявол носить Прада 2','13:45','IMAX')">13:45</div><div class="time-slot sold-out">17:00</div><div class="time-slot" onclick="openBuyModal('Диявол носить Прада 2','20:15','IMAX')">20:15</div><div class="time-slot" onclick="openBuyModal('Диявол носить Прада 2','23:30','IMAX')">23:30</div></div></td>
+          </tr>
+          <tr>
+            <td><div class="schedule-movie-info"><div style="width:48px;height:72px;border-radius:6px;background:linear-gradient(135deg,#0f2027,#2c5364);display:flex;align-items:center;justify-content:center;font-size:28px;flex-shrink:0"><img src="../duna.webp" alt=""></div><div><div class="schedule-movie-name">Дюна: Частина 2</div><div class="schedule-movie-genre">Фантастика, Пригоди • 166 хв</div><div style="margin-top:4px;font-size:11px;color:var(--text-muted)">⭐ 7.9 • 12+</div></div></div></td>
+            <td style="white-space:nowrap;font-size:13px;color:var(--text-secondary)">Зал 2<br><small>3D</small></td>
+            <td><span class="format-tag format-3d">3D</span></td>
+            <td><div class="time-slots"><div class="time-slot" onclick="openBuyModal('Дюна: Частина 3','11:00','3D')">11:00</div><div class="time-slot sold-out">14:30</div><div class="time-slot" onclick="openBuyModal('Дюна: Частина 3','18:00','3D')">18:00</div><div class="time-slot" onclick="openBuyModal('Дюна: Частина 3','21:30','3D')">21:30</div></div></td>
+          </tr>
+          <tr>
+            <td><div class="schedule-movie-info"><div style="width:48px;height:72px;border-radius:6px;background:linear-gradient(135deg,#2d1b69,#11998e);display:flex;align-items:center;justify-content:center;font-size:28px;flex-shrink:0"><img src="../da vinci.jfif" alt=""></div><div><div class="schedule-movie-name">Код Да Вінчі</div><div class="schedule-movie-genre">Жахи, Трилер • 142 хв</div><div style="margin-top:4px;font-size:11px;color:var(--text-muted)">⭐ 9.1 • 18+</div></div></div></td>
+            <td style="white-space:nowrap;font-size:13px;color:var(--text-secondary)">Зал 3<br><small>4DX</small></td>
+            <td><span class="format-tag format-4dx">4DX</span></td>
+            <td><div class="time-slots"><div class="time-slot" onclick="openBuyModal('Термінатор: Зародження','12:00','4DX')">12:00</div><div class="time-slot" onclick="openBuyModal('Термінатор: Зародження','15:00','4DX')">15:00</div><div class="time-slot" onclick="openBuyModal('Термінатор: Зародження','19:00','4DX')">19:00</div><div class="time-slot sold-out">22:00</div></div></td>
+          </tr>
+          <tr>
+            <td><div class="schedule-movie-info"><div style="width:48px;height:72px;border-radius:6px;background:linear-gradient(135deg,#f093fb,#f5576c);display:flex;align-items:center;justify-content:center;font-size:28px;flex-shrink:0"><img src="../turizmo.jpg" alt=""></div><div><div class="schedule-movie-name">Гран Туризмо</div><div class="schedule-movie-genre">Спортивний, Екшн • 138 хв</div><div style="margin-top:4px;font-size:11px;color:var(--text-muted)">⭐ 7.2 • 12+</div></div></div></td>
+            <td style="white-space:nowrap;font-size:13px;color:var(--text-secondary)">Зал 4<br><small>2D</small></td>
+            <td><span class="format-tag format-2d">2D</span></td>
+            <td><div class="time-slots"><div class="time-slot" onclick="openBuyModal('Не дивіться вгору 2','10:00','2D')">10:00</div><div class="time-slot" onclick="openBuyModal('Не дивіться вгору 2','13:00','2D')">13:00</div><div class="time-slot" onclick="openBuyModal('Не дивіться вгору 2','16:00','2D')">16:00</div><div class="time-slot" onclick="openBuyModal('Не дивіться вгору 2','19:30','2D')">19:30</div><div class="time-slot" onclick="openBuyModal('Не дивіться вгору 2','22:30','2D')">22:30</div></div></td>
+          </tr>
+          <tr>
+            <td><div class="schedule-movie-info"><div style="width:48px;height:72px;border-radius:6px;background:linear-gradient(135deg,#1a1a2e,#0f3460);display:flex;align-items:center;justify-content:center;font-size:28px;flex-shrink:0"><img src="../maykl.jfif" alt=""></div><div><div class="schedule-movie-name">Майкл</div><div class="schedule-movie-genre">Мюзикл, Драма • 112 хв</div><div style="margin-top:4px;font-size:11px;color:var(--text-muted)">⭐ 8.7 • 6+</div></div></div></td>
+            <td style="white-space:nowrap;font-size:13px;color:var(--text-secondary)">Зал 5<br><small>VIP</small></td>
+            <td><span class="format-tag format-3d">3D</span></td>
+            <td><div class="time-slots"><div class="time-slot" onclick="openBuyModal('Дракон: Початок','11:30','VIP 3D')">11:30</div><div class="time-slot" onclick="openBuyModal('Дракон: Початок','14:00','VIP 3D')">14:00</div><div class="time-slot sold-out">16:30</div><div class="time-slot" onclick="openBuyModal('Дракон: Початок','20:00','VIP 3D')">20:00</div></div></td>
+          </tr>
+          <tr>
+            <td><div class="schedule-movie-info"><div style="width:48px;height:72px;border-radius:6px;background:linear-gradient(135deg,#e44d26,#f16529);display:flex;align-items:center;justify-content:center;font-size:28px;flex-shrink:0"><img src="../animals.jfif" alt=""></div><div><div class="schedule-movie-name">Фантастичні Тварини: Таємниці Дамблдора</div><div class="schedule-movie-genre">Фантастика, Пригоди • 105 хв</div><div style="margin-top:4px;font-size:11px;color:var(--text-muted)">⭐ 6.8 • 12+</div></div></div></td>
+            <td style="white-space:nowrap;font-size:13px;color:var(--text-secondary)">Зал 6<br><small>2D</small></td>
+            <td><span class="format-tag format-2d">2D</span></td>
+            <td><div class="time-slots"><div class="time-slot" onclick="openBuyModal('Темний Ліс','15:30','2D')">15:30</div><div class="time-slot" onclick="openBuyModal('Темний Ліс','18:30','2D')">18:30</div><div class="time-slot" onclick="openBuyModal('Темний Ліс','21:00','2D')">21:00</div><div class="time-slot" onclick="openBuyModal('Темний Ліс','23:45','2D')">23:45</div></div></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </main>
+</div>
+
+<footer class="footer">
+  <div class="footer-top">
+    <div><div class="footer-brand-name">PAVLISH<span>FILMS</span></div><p class="footer-brand-desc">Найбільший кінотеатр Львова.</p>      <div class="footer-socials">
+        <a href="https://facebook.com" target="_blank"><img src="../facebook.png" alt="facebook"></a>
+        <a href="https://instagram.com" target="_blank"><img src="../insta.png" alt="insta"></a>
+        <a href="https://t.me" target="_blank"><img src="../telegram.png" alt="telegram"></a>
+        <a href="https://youtube.com" target="_blank"><img src="../youtube.png" alt="youtube"></a>
+      </div></div>
+    <div class="footer-col"><h4>Фільми</h4><a href="movies.html">Афіша</a><a href="schedule.html">Розклад</a><a href="promotions.html">Акції</a></div>
+    <div class="footer-col"><h4>Кінотеатр</h4><a href="halls.html">Зали</a><a href="about.html">Про нас</a><a href="contacts.html">Контакти</a></div>
+    <div class="footer-col"><h4>Ціни</h4><a href="#">Прейскурант</a><a href="#">Знижки</a><a href="#">Абонементи</a></div>
+  </div>
+  <div class="footer-bottom"><p>© 2026 PavlishFilms.</p><div class="footer-bottom-links"><a href="#">Публічна оферта</a><a href="#">Конфіденційність</a></div></div>
+</footer>
+
+<!-- BUY TICKET MODAL -->
+<div class="modal-overlay" id="buyModal">
+  <div class="modal" style="max-width:600px">
+    <div class="modal-close" onclick="closeModal('buyModal')">✕</div>
+    <div class="modal-title"> Придбати квиток</div>
+    <div id="buyModalInfo" style="background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius-sm);padding:16px;margin-bottom:24px;display:flex;gap:16px;align-items:center">
+      <div style="font-size:36px">🎬</div>
+      <div>
+        <div id="buyMovieTitle" style="font-weight:700;font-size:16px;margin-bottom:4px">Фільм</div>
+        <div id="buyTimeDisplay" style="font-size:13px;color:var(--text-secondary)">Час сеансу</div>
+      </div>
+    </div>
+    <div class="seat-map" id="seatMap"></div>
+    <div style="background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius-sm);padding:16px;margin:16px 0;display:flex;justify-content:space-between;align-items:center">
+      <div id="selectedSeatsInfo" style="font-size:13px;color:var(--text-secondary)">Оберіть місця</div>
+      <div style="font-weight:800;font-size:20px;color:var(--accent-gold)" id="totalPrice">0 грн</div>
+    </div>
+    <form id="buyForm">
+      <div class="form-group"><label>Ваше ім'я</label><input type="text" placeholder="Іван Франко" required></div>
+      <div class="form-group"><label>Email для квитків</label><input type="email" placeholder="your@email.com" required></div>
+      <div class="form-group"><label>Телефон</label><input type="tel" placeholder="+38 (0XX) XXX-XX-XX" required></div>
+      <button type="submit" class="form-submit"> Оплатити та отримати квитки</button>
+    </form>
+  </div>
+</div>
+
+<div class="modal-overlay" id="loginModal"><div class="modal"><div class="modal-close" onclick="closeModal('loginModal')">✕</div><div class="modal-title">Вхід</div><div class="form-group"><label>Email</label><input type="email"></div><div class="form-group"><label>Пароль</label><input type="password"></div><button class="form-submit" onclick="handleLogin()">Увійти</button></div></div>
+
+<script src="../js/main.js"></script>
+<script>
+function openBuyModal(movie, time, format) {
+  document.getElementById('buyMovieTitle').textContent = movie;
+  document.getElementById('buyTimeDisplay').textContent = `⏰ ${time}  •  🎞️ ${format}`;
+  openModal('buyModal');
+}
+</script>
+</body>
+</html>
